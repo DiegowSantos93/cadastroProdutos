@@ -11,7 +11,7 @@ const modelo = (id) => {
 
         let produto
         if (id == undefined){
-            if (nome != "" && nome.length >= 3 && preco > 0){
+            if (nome.length >= 3 && preco > 0){
                 produto = {nome, preco, id: ultimoId}
                 ultimoId++;
             } else {
