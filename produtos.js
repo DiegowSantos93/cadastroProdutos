@@ -11,7 +11,7 @@ const modelo = (id) => {
 
         let produto
         if (id == undefined){
-            if (nome != "" && preco > 0){
+            if (nome != "" && nome.length >= 3 && preco > 0){
                 produto = {nome, preco, id: ultimoId}
                 ultimoId++;
             } else {
@@ -74,6 +74,6 @@ const remover = () => {
         } else {
         console.log('Id não localizado.')
         }
-}
+};
 
 module.exports = {criar, listar, editar, remover}
